@@ -1,0 +1,54 @@
+POST http://localhost:8080/api/expenses
+Content-Type: application/json
+
+{
+  "uuid": 104,
+  "expenseDate": "2019-07-15T15:00:00Z",
+  "description": "Testing",
+  "location": "Arizona",
+  "category": {
+    "uuid": 3,
+    "name": "Travel"
+  }
+}
+###
+GET http://localhost:8080/api/expenses
+Accept: application/json
+
+###
+POST http://localhost:8080/api/category
+Content-Type: application/json
+
+{
+  "uuid": 4,
+  "name": "Healthcare"
+}
+
+###
+GET http://localhost:8080/api/categories
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/category/1
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/category/4
+Content-Type: application/json
+
+{
+  "uuid": 5,
+  "name": "Vacation"
+}
+
+###
+
+DELETE http://localhost:8080/api/category/5
+Content-Type: application/json
+
+###
+DELETE http://localhost:8080/api/expenses/103
+Content-Type: application/json
+
+###
